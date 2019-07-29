@@ -1,0 +1,138 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:ptr="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@mipmap/pk_main">
+
+    </RelativeLayout>
+
+
+    <com.youth.banner.Banner
+        android:id="@+id/banner"
+        android:layout_width="match_parent"
+        android:layout_height="170dp"
+        android:layout_marginLeft="14dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginRight="14dp" />
+
+    <LinearLayout
+        android:id="@+id/pk_pp_rl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/banner"
+        android:layout_marginLeft="14dp"
+        android:layout_marginTop="9dp"
+        android:layout_marginRight="14dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/pk_paihang"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:background="@mipmap/pk_ph"/>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/pk_hot_rl"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_below="@+id/pk_pp_rl"
+        android:layout_marginLeft="14dp"
+        android:layout_marginRight="14dp">
+
+        <TextView
+            android:id="@+id/line"
+            android:layout_width="4dp"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:background="#2a6fee" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="14dp"
+            android:text="知识点"
+            android:textColor="#2a6fee"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/pk_hot_more"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="14dp"
+            android:layout_marginRight="20dp"
+            android:text="更多"
+            android:textColor="#2a6fee"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/pk_right" />
+
+    </RelativeLayout>
+
+    <com.jude.easyrecyclerview.EasyRecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_empty="@layout/view_empty"
+        app:layout_progress="@layout/view_progress"
+        app:layout_error="@layout/view_error"
+        app:recyclerClipToPadding="true"
+        app:scrollbarStyle="insideOverlay"
+        app:scrollbars="none"
+        android:layout_below="@id/pk_hot_rl"
+        android:layout_above="@id/tab"/>
+    <WebView
+        android:id="@+id/hide_webview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone">
+    </WebView>
+
+    <LinearLayout
+        android:id="@+id/tab"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:gravity="center_vertical"
+        android:layout_alignParentBottom="true">
+        <ImageView
+            android:id="@+id/home"
+            android:layout_width="30dp"
+            android:layout_height="60dp"
+            android:src="@mipmap/tab_home_2"
+            android:layout_weight="1"/>
+        <ImageView
+            android:id="@+id/pk"
+            android:layout_width="30dp"
+            android:layout_height="50dp"
+            android:src="@mipmap/tab_pk_1"
+            android:layout_weight="1"/>
+        <ImageView
+            android:id="@+id/team"
+            android:layout_width="30dp"
+            android:layout_height="50dp"
+            android:src="@mipmap/tab_team_1"
+            android:layout_weight="1"/>
+        <ImageView
+            android:id="@+id/mine"
+            android:layout_width="30dp"
+            android:layout_height="50dp"
+            android:src="@mipmap/tab_mine_1"
+            android:layout_weight="1"/>
+    </LinearLayout>
+
+</RelativeLayout>

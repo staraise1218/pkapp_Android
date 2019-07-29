@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <include android:id="@+id/title_rl"
+        layout="@layout/title_normal"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/title_rl">
+
+        <EditText
+            android:id="@+id/et_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="14dp"
+            android:hint="请输入你要修改的内容"
+            android:textSize="@dimen/hint_size"
+            android:background="@null"
+            android:inputType="text"
+            android:maxLines="1"
+            android:maxLength="50"
+            android:singleLine="true" />
+
+        <Button
+            android:id="@+id/submit"
+            style="?android:textAppearanceSmall"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="提交"
+            android:textSize="18sp"
+            android:background="@drawable/search_title_bg"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:layout_marginBottom="20dp"
+            android:textColor="@color/white"
+            android:layout_alignParentBottom="true"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

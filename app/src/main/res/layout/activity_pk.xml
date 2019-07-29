@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <WebView
+        android:id="@+id/webview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/tab">
+    </WebView>
+
+    <LinearLayout
+        android:id="@+id/tab"
+        android:orientation="horizontal" android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:gravity="center_vertical"
+        android:background="@color/white"
+        android:layout_alignParentBottom="true">
+        <ImageView
+            android:id="@+id/home"
+            android:layout_width="30dp"
+            android:layout_height="50dp"
+            android:src="@mipmap/tab_home_1"
+            android:layout_weight="1"/>
+        <ImageView
+            android:id="@+id/pk"
+            android:layout_width="30dp"
+            android:layout_height="60dp"
+            android:src="@mipmap/tab_pk_2"
+            android:layout_weight="1"/>
+        <ImageView
+            android:id="@+id/team"
+            android:layout_width="30dp"
+            android:layout_height="50dp"
+            android:src="@mipmap/tab_team_1"
+            android:layout_weight="1"/>
+        <ImageView
+            android:id="@+id/mine"
+            android:layout_width="30dp"
+            android:layout_height="50dp"
+            android:src="@mipmap/tab_mine_1"
+            android:layout_weight="1"/>
+    </LinearLayout>
+</RelativeLayout>
